@@ -16,7 +16,7 @@ namespace MaHoaDonGian
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMaHoaDonGian());
+            Application.Run(new frmMaHoaGiaiMa());
         }
     }
 }

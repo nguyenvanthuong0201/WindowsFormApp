@@ -16,7 +16,8 @@ namespace Bai1
         {
             InitializeComponent();
         }
-       private bool KiemTraHopLe(string s )
+        
+       private bool KiemTraHopLe(string s )///Khai báo kiểm tra kí tự viết HOA mới hợp lệ////
         {
             
             bool HopLe = true;
@@ -34,21 +35,24 @@ namespace Bai1
 
         }
 
-        private void txtBanTinRo_TextChanged(object sender, EventArgs e)
+        private void txtBanTinRo_TextChanged(object sender, EventArgs e) ///Kiểm Tra TEXTBOX có hợp lệ không
         {
             btnMaHoa.Enabled = KiemTraHopLe(txtBanTinRo.Text);
         }
 
-        private void txtBanTinDuocMaHoa_TextChanged(object sender, EventArgs e)
+        private void txtBanTinDuocMaHoa_TextChanged(object sender, EventArgs e)///Kiểm Tra TEXTBOX có hợp lệ không
         {
             btnGiaiMa.Enabled = KiemTraHopLe(txtBanTinDuocMaHoa.Text);
         }
 
         private void btnMaHoa_Click(object sender, EventArgs e)
         {
-            string s = ""; for (int i = 0; i < txtBanTinRo.Text.Length; i++)
+            string s = "";
+            for (int i = 0; i < txtBanTinRo.Text.Length; i++)
             {
-                char c = txtBanTinRo.Text[i]; int n = (int)c;// MessageBox.Show((nudSoViTri.Value).ToString());
+                char c = txtBanTinRo.Text[i];
+                int n = (int)c;
+                // MessageBox.Show((nudSoViTri.Value).ToString());
                 c = (Char)((n-65 + (int)(nudSoViTri.Value))%26 + 65);
                 s += c; // s = s + c     
             } txtBanTinDuocMaHoa.Text= s;
@@ -61,6 +65,11 @@ namespace Bai1
                 char c = txtBanTinDuocMaHoa.Text[i]; int n = (int)c;// MessageBox.Show((nudSoViTri.Value).ToString());
                 c = (Char)((n - 65 -(int)(nudSoViTri.Value)+26) % 26 + 65);s += c; // s = s + c   
             } txtBanTinDuocGiaiMa.Text = s;
+        }
+
+        private void frmBaiToan1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

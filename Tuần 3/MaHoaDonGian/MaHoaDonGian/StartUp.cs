@@ -16,5 +16,30 @@ namespace MaHoaDonGian
         {
             InitializeComponent();
         }
+
+        private void StartUp_Load(object sender, EventArgs e)
+        {
+            System.Timers.Timer timer1 = new System.Timers.Timer();
+            timer1.Elapsed += new System.Timers.ElapsedEventHandler(timer1_Elapsed);
+            timer1.Interval = 2000;
+            timer1.Start();
+        }
+        private void CloseForm()
+        {
+            this.Close();
+        }
+        private void timer1_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            if (this.InvokeRequired) // This shouldn't happen since we are on the same thread
+            {
+                this.Invoke(new MethodInvoker(CloseForm));
+            }
+            else
+            {
+                CloseForm();
+            }
+        }
+
+       
     }
 }

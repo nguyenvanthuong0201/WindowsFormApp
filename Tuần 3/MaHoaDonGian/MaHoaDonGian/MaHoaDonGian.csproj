@@ -46,17 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmMaHoaDonGian.cs">
+    <Compile Include="CacGiaiThuat.cs" />
+    <Compile Include="frmMaHoaGiaiMa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMaHoaDonGian.Designer.cs">
-      <DependentUpon>frmMaHoaDonGian.cs</DependentUpon>
+    <Compile Include="frmMaHoaGiaiMa.Designer.cs">
+      <DependentUpon>frmMaHoaGiaiMa.cs</DependentUpon>
     </Compile>
+    <Compile Include="GiaiThuat\AES\BaseTransform.cs" />
+    <Compile Include="GiaiThuat\AES\FileIO.cs" />
+    <Compile Include="GiaiThuat\AES\Keys.cs" />
+    <Compile Include="GiaiThuat\AES\Matrix.cs" />
+    <Compile Include="GiaiThuat\AES\MultiplicativeInverse.cs" />
+    <Compile Include="GiaiThuat\AES\ProcessAES.cs" />
+    <Compile Include="GiaiThuat\AES\TransformTables.cs" />
+    <Compile Include="GiaiThuat\CommonProcess.cs" />
+    <Compile Include="GiaiThuat\DES\DESData.cs" />
+    <Compile Include="GiaiThuat\DES\FileIO.cs" />
+    <Compile Include="GiaiThuat\DES\ProcessDES.cs" />
     <Compile Include="MaHoa.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProgressEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmMaHoaDonGian.resx">
-      <DependentUpon>frmMaHoaDonGian.cs</DependentUpon>
+    <Compile Include="StartUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartUp.Designer.cs">
+      <DependentUpon>StartUp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmMaHoaGiaiMa.resx">
+      <DependentUpon>frmMaHoaGiaiMa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +86,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StartUp.resx">
+      <DependentUpon>StartUp.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -80,5 +102,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

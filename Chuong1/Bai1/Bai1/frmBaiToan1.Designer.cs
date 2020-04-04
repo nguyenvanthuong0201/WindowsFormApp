@@ -161,6 +161,7 @@
             this.Controls.Add(this.lblSoViTri);
             this.Name = "frmBaiToan1";
             this.Text = "Bài Toán 1";
+            this.Load += new System.EventHandler(this.frmBaiToan1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudSoViTri)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
